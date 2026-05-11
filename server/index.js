@@ -399,19 +399,39 @@ app.post("/api/stats/send-weekly", async (req, res) => {
         to: user.email,
         subject: "Your weekly OurSpace stats",
         html: `
-          <div style="font-family: Arial, sans-serif; line-height: 1.5;">
-            <h2>Your weekly OurSpace stats</h2>
-            <p>Hi ${user.username},</p>
-            <p>Here is your weekly update:</p>
-            <ul>
-              <li><b>Followers:</b> ${user.followers.length}</li>
-              <li><b>Following:</b> ${user.following.length}</li>
-              <li><b>Posts:</b> ${posts.length}</li>
-              <li><b>Likes received:</b> ${likes}</li>
-              <li><b>Comments received:</b> ${comments}</li>
-            </ul>
-            <p>Keep sharing your space.</p>
-          </div>
+          Hi, {name}! ✨
+
+Thank you for being part of OurSpace 🤍
+We hope you’ve had an amazing month filled with fun memories, creativity, and kindness 🌎📸💖
+
+Here’s your monthly recap 💫
+
+👥 Followers: {followers}
+❤️ Likes Received: {likesReceived}
+📝 Posts Made: {postsMade}
+📨 DMs Sent: {dmsSent}
+🔥 Most Popular Post: {topPostLikes} likes
+
+Your Top Friends This Month 💖
+✨ {friend1}
+✨ {friend2}
+✨ {friend3}
+
+People You Supported The Most 🤍
+📸 {likedPerson1}
+📸 {likedPerson2}
+📸 {likedPerson3}
+
+Little Reminder for This Month 🌷
+✨ Jesus loves you so much
+✨ You are important
+✨ You were created with purpose
+✨ Keep being kind and encouraging to others 💕
+
+Thank you for making OurSpace a positive place 🌎✨
+
+– The OurSpace Team 🤍
+
         `
       });
 
